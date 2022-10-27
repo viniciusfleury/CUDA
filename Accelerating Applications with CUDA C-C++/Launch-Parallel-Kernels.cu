@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /*
- * Refactor firstParallel so that it can run on the GPU.
+ * The function below runs on the GPU.
  */
 
 __global__ void firstParallel()
@@ -12,15 +12,13 @@ __global__ void firstParallel()
 int main()
 {
   /*
-   * Refactor this call to firstParallel to execute in parallel
-   * on the GPU.
+   * firstParallel execute in parallel on the GPU.
    */
 
   firstParallel<<<5, 5>>>();
 
   /*
-   * Some code is needed below so that the CPU will wait
-   * for the GPU kernels to complete before proceeding.
+   * Kernel synchronization
    */
    cudaDeviceSynchronize();
 
