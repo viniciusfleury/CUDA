@@ -18,5 +18,5 @@ int main()
    */
 
   loop<<<1, 10>>>();
-  cudaDeviceSynchronize()
+  cudaDeviceSynchronize();
 }
