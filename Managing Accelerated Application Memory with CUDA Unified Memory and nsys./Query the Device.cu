@@ -22,7 +22,7 @@ int main()
   computeCapabilityMajor = props.major;
   computeCapabilityMinor = props.minor;
   multiProcessorCount = props.multiProcessorCount;
-  warpSize = props.warpSize
+  warpSize = props.warpSize;
   
 
   /*
