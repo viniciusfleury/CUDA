@@ -1,0 +1,85 @@
+Warning: LBR backtrace method is not supported on this platform. DWARF backtrace method will be used.
+WARNING: The command line includes a target application therefore the CPU context-switch scope has been set to process-tree.
+Collecting data...
+Device ID: 0	Number of SMs: 40
+Success! All values calculated correctly.
+Processing events...
+Saving temporary "/tmp/nsys-report-6966-22b6-a537-5753.qdstrm" file to disk...
+
+Creating final output files...
+Processing [==============================================================100%]
+Saved report file to "/tmp/nsys-report-6966-22b6-a537-5753.qdrep"
+Exporting 1904 events: [==================================================100%]
+
+Exported successfully to
+/tmp/nsys-report-6966-22b6-a537-5753.sqlite
+
+
+CUDA API Statistics:
+
+ Time(%)  Total Time (ns)  Num Calls    Average    Minimum   Maximum           Name         
+ -------  ---------------  ---------  -----------  -------  ---------  ---------------------
+    93.5        353164129          3  117721376.3    34721  353052550  cudaMallocManaged    
+     4.5         16887197          3    5629065.7   809179   15105769  cudaFree             
+     1.0          3905790          3    1301930.0  1241485    1416298  cudaMemPrefetchAsync 
+     0.9          3559928          2    1779964.0  1710175    1849753  cudaDeviceSynchronize
+     0.0            87917          4      21979.3    10338      50159  cudaLaunchKernel     
+
+
+
+CUDA Kernel Statistics:
+
+ Time(%)  Total Time (ns)  Instances   Average   Minimum  Maximum                     Name                    
+ -------  ---------------  ---------  ---------  -------  -------  -------------------------------------------
+    52.2          1870551          3   623517.0   620370   628178  initWith(float, float*, int)               
+    47.8          1710203          1  1710203.0  1710203  1710203  addVectorsInto(float*, float*, float*, int)
+
+
+
+CUDA Memory Operation Statistics (by time):
+
+ Time(%)  Total Time (ns)  Operations  Average  Minimum  Maximum              Operation            
+ -------  ---------------  ----------  -------  -------  -------  ---------------------------------
+   100.0         21205702         768  27611.6     1631   159900  [CUDA Unified Memory memcpy DtoH]
+
+
+
+CUDA Memory Operation Statistics (by size in KiB):
+
+   Total     Operations  Average  Minimum  Maximum               Operation            
+ ----------  ----------  -------  -------  --------  ---------------------------------
+ 131072.000         768  170.667    4.000  1020.000  [CUDA Unified Memory memcpy DtoH]
+
+
+
+Operating System Runtime API Statistics:
+
+ Time(%)  Total Time (ns)  Num Calls   Average    Minimum   Maximum              Name           
+ -------  ---------------  ---------  ----------  -------  ---------  --------------------------
+    75.8        723292744         38  19034019.6    26911  100121890  poll                      
+    13.1        124665172        679    183601.1     1022   17186700  ioctl                     
+     8.5         81230907         28   2901103.8    21908   20613573  sem_timedwait             
+     2.1         20338481         98    207535.5     1173   15053852  mmap                      
+     0.2          1989830         82     24266.2     5392      36806  open64                    
+     0.2          1635569          3    545189.7     8941    1614588  pthread_rwlock_timedwrlock
+     0.0           214883          3     71627.7    69592      74583  fgets                     
+     0.0           147630         11     13420.9     5737      31779  write                     
+     0.0           141118          4     35279.5    30415      40514  pthread_create            
+     0.0           131462         25      5258.5     1666      25703  fopen                     
+     0.0            49240         34      1448.2     1028       7528  fcntl                     
+     0.0            48712         11      4428.4     2117      10368  munmap                    
+     0.0            31018         18      1723.2     1043       6779  fclose                    
+     0.0            28273          5      5654.6     3420       8957  open                      
+     0.0            20436         12      1703.0     1263       2804  read                      
+     0.0            19405          6      3234.2     1045       7215  fgetc                     
+     0.0            16219          3      5406.3     3430       6445  fread                     
+     0.0            10623          1     10623.0    10623      10623  sem_wait                  
+     0.0            10174          2      5087.0     4758       5416  socket                    
+     0.0             7973          1      7973.0     7973       7973  pipe2                     
+     0.0             7469          4      1867.3     1737       2007  mprotect                  
+     0.0             5803          1      5803.0     5803       5803  connect                   
+     0.0             2078          1      2078.0     2078       2078  bind                      
+     0.0             1548          1      1548.0     1548       1548  listen                    
+
+Report file moved to "/dli/task/report18.qdrep"
+Report file moved to "/dli/task/report18.sqlite"
