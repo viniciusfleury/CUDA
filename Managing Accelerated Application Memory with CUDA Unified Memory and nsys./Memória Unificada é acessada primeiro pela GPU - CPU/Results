@@ -1,0 +1,57 @@
+Warning: LBR backtrace method is not supported on this platform. DWARF backtrace method will be used.
+WARNING: The command line includes a target application therefore the CPU context-switch scope has been set to process-tree.
+Collecting data...
+Processing events...
+Saving temporary "/tmp/nsys-report-09ac-6785-3f7c-167c.qdstrm" file to disk...
+
+Creating final output files...
+Processing [==============================================================100%]
+Saved report file to "/tmp/nsys-report-09ac-6785-3f7c-167c.qdrep"
+Exporting 1077 events: [==================================================100%]
+
+Exported successfully to
+/tmp/nsys-report-09ac-6785-3f7c-167c.sqlite
+
+
+CUDA API Statistics:
+
+ Time(%)  Total Time (ns)  Num Calls    Average     Minimum    Maximum           Name         
+ -------  ---------------  ---------  -----------  ---------  ---------  ---------------------
+    97.9        264652137          1  264652137.0  264652137  264652137  cudaMallocManaged    
+     2.1          5665186          1    5665186.0    5665186    5665186  cudaFree             
+     0.0            55836          1      55836.0      55836      55836  cudaDeviceSynchronize
+     0.0             1061          1       1061.0       1061       1061  cudaLaunchKernel     
+
+
+
+Operating System Runtime API Statistics:
+
+ Time(%)  Total Time (ns)  Num Calls   Average    Minimum   Maximum              Name           
+ -------  ---------------  ---------  ----------  -------  ---------  --------------------------
+    75.6        614490986         36  17069194.1     4092  102854354  poll                      
+    13.2        107463993        665    161600.0     1001   17317579  ioctl                     
+     9.9         80074585         31   2583051.1    21454   20514263  sem_timedwait             
+     1.0          8448320         92     91829.6     1502    5497514  mmap                      
+     0.2          1485426         82     18115.0     4804      25796  open64                    
+     0.0           214221          3     71407.0    69599      74913  fgets                     
+     0.0           144574          4     36143.5    32180      39863  pthread_create            
+     0.0           117940         25      4717.6     1550      22567  fopen                     
+     0.0            76386         11      6944.2     4415      10854  write                     
+     0.0            33850          8      4231.3     2439       5946  munmap                    
+     0.0            29682          5      5936.4     3332       8849  open                      
+     0.0            27346         18      1519.2     1051       3728  fclose                    
+     0.0            23868         13      1836.0     1138       2809  read                      
+     0.0            23762          2     11881.0    10441      13321  pthread_rwlock_timedwrlock
+     0.0            21080          6      3513.3     1016       9019  fgetc                     
+     0.0            18686         14      1334.7     1000       4877  fcntl                     
+     0.0            12370          2      6185.0     5276       7094  socket                    
+     0.0             8063          4      2015.8     1808       2520  mprotect                  
+     0.0             6918          1      6918.0     6918       6918  pipe2                     
+     0.0             6832          1      6832.0     6832       6832  connect                   
+     0.0             6585          2      3292.5     3144       3441  fread                     
+     0.0             2527          1      2527.0     2527       2527  bind                      
+     0.0             1796          1      1796.0     1796       1796  listen                    
+     0.0             1267          1      1267.0     1267       1267  pthread_rwlock_timedrdlock
+
+Report file moved to "/dli/task/report10.qdrep"
+Report file moved to "/dli/task/report10.sqlite"
