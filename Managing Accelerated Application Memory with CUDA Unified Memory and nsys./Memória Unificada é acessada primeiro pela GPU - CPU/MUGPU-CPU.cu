@@ -30,9 +30,6 @@ int main()
   size_t numberOfBlocks = (N + threadsPerBlock - 1)/threadsPerBlock;
   
   deviceKernel<<<threadsPerBlock, numberOfBlocks>>>(a, N);
-   
-  
-  hostFunction(a, N);
 
   /*
    * Conduct experiments to learn more about the behavior of
@@ -48,6 +45,8 @@ int main()
    */
    
   cudaDeviceSynchronize();
+  
+  hostFunction(a, N);
 
   cudaFree(a);
 }
