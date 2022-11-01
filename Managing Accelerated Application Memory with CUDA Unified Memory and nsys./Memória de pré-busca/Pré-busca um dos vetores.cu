@@ -73,7 +73,7 @@ int main()
   cudaMallocManaged(&b, size);
   cudaMallocManaged(&c, size);
   
-  cudaMemPrefetchAsync(pointerToSomeUMData, size, deviceId);
+  cudaMemPrefetchAsync(a, size, deviceId);
 
   size_t threadsPerBlock;
   size_t numberOfBlocks;
