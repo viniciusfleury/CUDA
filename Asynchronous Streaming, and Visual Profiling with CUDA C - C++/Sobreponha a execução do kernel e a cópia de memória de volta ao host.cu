@@ -102,8 +102,8 @@ int main()
   addVectorsErr = cudaGetLastError();
   if(addVectorsErr != cudaSuccess) printf("Error: %s\n", cudaGetErrorString(addVectorsErr));
 
-  asyncErr = cudaDeviceSynchronize();
-  if(asyncErr != cudaSuccess) printf("Error: %s\n", cudaGetErrorString(asyncErr));
+  asyncErrAdd = cudaDeviceSynchronize();
+  if(asyncErrAdd != cudaSuccess) printf("Error: %s\n", cudaGetErrorString(asyncErr));
 
   checkElementsAre(7, h_c, N);
 
