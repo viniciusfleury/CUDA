@@ -103,7 +103,7 @@ int main()
   if(addVectorsErr != cudaSuccess) printf("Error: %s\n", cudaGetErrorString(addVectorsErr));
 
   asyncErrAdd = cudaDeviceSynchronize();
-  if(asyncErrAdd != cudaSuccess) printf("Error: %s\n", cudaGetErrorString(asyncErr));
+  if(asyncErrAdd != cudaSuccess) printf("Error: %s\n", cudaGetErrorString(asyncErrAdd));
 
   checkElementsAre(7, h_c, N);
 
