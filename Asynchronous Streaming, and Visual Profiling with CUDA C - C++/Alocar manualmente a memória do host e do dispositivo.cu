@@ -57,7 +57,7 @@ int main()
   cudaMalloc(&b, size);
   cudaMalloc(&c, size);
   
-  float *d
+  float *d;
   cudaMallocHost(&d, size);
   
 
