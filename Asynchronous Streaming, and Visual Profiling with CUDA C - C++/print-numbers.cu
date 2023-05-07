@@ -10,7 +10,10 @@ int main()
 {
   for (int i = 0; i < 5; ++i)
   {
-    printNumber<<<1, 1>>>(i);
+    cudaStream_t stream;
+    cudaStreamCreate(&stream);
+    printNumber<<<1, 1, 0, stream>>>(i);
+    cudaStreamDestroy(stream);
   }
   cudaDeviceSynchronize();
 }
